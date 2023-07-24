@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="main.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="contant_wrapper">
+      <div class="background_image">
+        <div class="bg__card--front">
+          <div class="logo_container">
+            <img src="images/card-logo.svg" alt="" />
+          </div>
+          <h1 class="card__number--label">0000 0000 0000 0000</h1>
+          <h2 class="card_name--label">Jane Appleseed</h2>
+          <h3 class="month_label">00 /</h3>
+          <h3 class="year_label">00</h3>
+        </div>
+        <div class="bg__card--back">
+          <h4 class="cvc_label">000</h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="idle_state">
+          <form action="index.html" id="form" class="card__signup--form">
+            <label for="first-name">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              class="form_input"
+              id="first_name"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <div class="error_meassage"></div>
+            <label for="card_number">CARD NUMBER</label>
+            <input
+              type="number"
+              class="form_input"
+              id="card_info"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <div class="error_meassage error_meassage--cn"></div>
+            <div class="date__svc--container">
+              <div class="data_container">
+                <label for="date">EXP.DATE (MM/YY)</label>
+                <div class="exp__data--container">
+                  <input
+                    type="number"
+                    class="form_input"
+                    id="month"
+                    placeholder="MM"
+                  />
+                  <input
+                    type="number"
+                    class="form_input"
+                    id="year"
+                    placeholder="YY"
+                  />
+                </div>
+                <div class="error_meassage error_meassage--mm"></div>
+                <div class="error_meassage error_meassage--yy"></div>
+              </div>
+              <div class="cvc_container">
+                <label for="cvc">CVC</label>
+                <div class="cvc_box">
+                  <input
+                    type="number"
+                    class="form_input"
+                    id="cvc_number"
+                    placeholder="e.g. 123"
+                  />
+                </div>
+                <div class="error_meassage error_meassage--cvc"></div>
+              </div>
+            </div>
+            <button type="submit" class="button">Confirm</button>
+            <div class="attribution">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+              >. Coded by
+              <a href="https://github.com/ereklemanjavidze" target="_blank"
+                >erekle</a
+              >.
+            </div>
+          </form>
+        </div>
+
+        <!-- Completed state start -->
+        <div class="complete_state hidden">
+          <div class="icon_container">
+            <img src="images/icon-complete.svg" alt="icon" />
+          </div>
+          <div class="complete_text">
+            <span class="title">THANK YOU!</span>
+            <span class="card__details">We've added your card details</span>
+          </div>
+          <button class="button_continue">Continue</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
